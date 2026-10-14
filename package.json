@@ -1,0 +1,7 @@
+{
+  "name": "intentlock",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Deterministic mock payment core for the IntentLock hackathon MVP",
+  "scripts": { "test": "node --test" }
+}
