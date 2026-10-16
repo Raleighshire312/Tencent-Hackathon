@@ -13,8 +13,10 @@ function parseMinimumRemainingCents(text) {
 }
 
 function parseRecipient(text) {
-  const match = text.match(/\b(?:to|for|send|pay)\s+([a-z][a-z0-9 _'-]*?)(?=\s+(?:s\$|\$|sgd\s|from|but|and|leav(?:e|ing)|keep|with|at least)\b|\s*$)/i);
-  return match ? match[1].trim() : null;
+  const match = text.match(/\b(?:to|for|send|pay|transfer)\s+([a-z][a-z0-9 _'-]*?)(?=\s+(?:s\$|\$|sgd\s|from|but|and|leav(?:e|ing)|keep(?:ing)?|while\s+keeping|with|at least)\b|\s*$)/i);
+  if (match) return match[1].trim();
+  const amountFirst = text.match(/\btransfer\s+(?:s\$|\$|sgd\s*)\s*[0-9]+(?:\.[0-9]{1,2})?\s+to\s+([a-z][a-z0-9 _'-]*?)(?=\s+(?:from|but|and|leav(?:e|ing)|keep(?:ing)?|while\s+keeping|with|at least)\b|\s*$)/i);
+  return amountFirst ? amountFirst[1].trim() : null;
 }
 
 function offlineIntent(message) {

@@ -1,11 +1,9 @@
-.env
-.env.*
-!.env.example
 node_modules/
-dist/
-build/
-coverage/
+.env
+.env.local
 .DS_Store
 *.log
-demo/recordings/
-
+npm-debug.log*
+coverage/
+.nyc_output/
+data/

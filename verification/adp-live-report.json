@@ -1,0 +1,36 @@
+{
+  "verifiedAt": "2026-10-14T15:09:47.736Z",
+  "mode": "LIVE",
+  "scenarios": [
+    {
+      "name": "legitimate",
+      "ok": true,
+      "stage": "prepare",
+      "code": null,
+      "provider": "adp",
+      "requestId": "4d229c04-8bdb-435e-ac31-e9e064db8d2b",
+      "intentHash": "c71e7a8338ec78816f8cce6ed9c14cd4759d3de9928c85568c8b8f6d058c4565",
+      "approval": true,
+      "executed": true
+    },
+    {
+      "name": "minimum-balance",
+      "ok": true,
+      "stage": "prepare",
+      "code": "VALIDATION_FAILED",
+      "provider": null,
+      "intentHash": null
+    }
+  ],
+  "provider": {
+    "mode": "LIVE",
+    "configured": true,
+    "liveVerified": true,
+    "lastSuccess": {
+      "at": "2026-10-14T15:09:51.557Z",
+      "requestId": "4d229c04-8bdb-435e-ac31-e9e064db8d2b",
+      "latencyMs": 3817
+    },
+    "lastFailure": null
+  }
+}
